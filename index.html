@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy World Teacher's Day!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <button id="playButton">Play Audio</button>
+  <div class="body">
+    <div class="birthdayCard">
+      <div class="cardFront"><h3 class="happy">Happy World Teacher's Day!</h3>
+        <div class="image">
+          <img src="NIELYN.jpg" alt="image">
+        </div>
+      </div>
+      <div class="cardInside">
+        <h3 class="back">HAPPY TEACHER'S DAY MA'AM NIELYN LALAGUNA</h3>
+        <p contenteditable="true">Dear m'am Nielyn,</p> 
+        <p contenteditable="true">Happy Teacher's Day Ma'am Nielyn! Thank yuo for your dedication, patience and inspiration. your guidance and hardwork truly make a difference,we love you mma'am NIELYN</p>
+        <p contenteditable="true"class="name">ROBLE</p>
+      </div>
+    </div>
+  </div>
+  <audio id="audio" src="Go_Beyond_Andy.mp3"></audio>
+  <script src="main.js"></script>
+</body>
+</html>
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  const audio = document.getElementById("audio");
+  const playButton = document.getElementById("playButton");
+  
+  playButton.addEventListener("click", function() {
+    if (audio.paused) {
+      audio.play();
+      playButton.textContent = "Pause Audio";
+    } else {
+      audio.pause();
+      playButton.textContent = "Play Audio";
+    }
+  });
+});
+
+</script>
